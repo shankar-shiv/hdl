@@ -13,19 +13,17 @@ foreach i {0 1} {
   ad_ip_parameter util_adc_${i}_xcvr CONFIG.CPLL_CFG1 0x2b
   ad_ip_parameter util_adc_${i}_xcvr CONFIG.CPLL_CFG2 0x2
   ad_ip_parameter util_adc_${i}_xcvr CONFIG.CPLL_FBDIV 2
-  #Missing CHANNEL params:
-  # CH_HSPMUX                     0b100000001000000
-  # PREIQ_FREQ_BST                1
-  # RTX_BUF_CML_CTRL              0b101
-  # RXPI_CFG0                     0b11000000000010
+  ad_ip_parameter util_adc_${i}_xcvr CONFIG.GTY4_CH_HSPMUX 0x4040
+  ad_ip_parameter util_adc_${i}_xcvr CONFIG.GTY4_PREIQ_FREQ_BST 1
+  ad_ip_parameter util_adc_${i}_xcvr CONFIG.GTY4_RTX_BUF_CML_CTRL 0x5
+  ad_ip_parameter util_adc_${i}_xcvr CONFIG.GTY4_RXPI_CFG0 0x3002
 
   ad_ip_parameter util_adc_${i}_xcvr CONFIG.QPLL_REFCLK_DIV 1
   ad_ip_parameter util_adc_${i}_xcvr CONFIG.QPLL_CFG0 0x333c
   ad_ip_parameter util_adc_${i}_xcvr CONFIG.QPLL_CFG4 0x2
   ad_ip_parameter util_adc_${i}_xcvr CONFIG.QPLL_FBDIV 20
-  #Missing COMMON params:
-  # PPF0_CFG               0b101100000000
-  # QPLL0_LPF              0b1101111111
+  ad_ip_parameter util_adc_${i}_xcvr CONFIG.GTY4_PPF0_CFG 0xB00
+
 }
 
 
