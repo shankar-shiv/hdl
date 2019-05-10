@@ -380,7 +380,7 @@ module system_top (
     .rx_sync_0 (rx_sync_0),
     .rx_sync_1_0 (rx_sync_1),
     .rx_sysref_0 (rx_sysref_0),
-    .rx_sysref_1_0 (rx_sysref_1)
+    .rx_sysref_1_0 (rx_sysref_0)
 
   );
 
